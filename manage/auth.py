@@ -63,7 +63,7 @@ class GoogleAuthenticator(object):
     def __byte_secret(self):
         missing_padding = len(self.secretKey) % 8
         if missing_padding != 0:
-            self.secret += '=' * (8 - missing_padding)
+            self.secretKey += '=' * (8 - missing_padding)
         return base64.b32decode(self.secretKey, casefold=True)
 
     def __int_to_bytestring(self,i, padding=8):
