@@ -1,3 +1,9 @@
+# 安装依赖
+在当前路径下执行一下命令：
+```cmd
+pip install -r requirements.txt
+```
+
 # 获取验证码
 1.通过secretKey获取
 ```python
