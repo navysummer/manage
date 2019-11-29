@@ -15,6 +15,10 @@ ip = 'xxx.xxx.xxx.xxx'
 phone = '184xxxx0317'
 password = 'xxxxxxxxx'
 sy = System(ip,phone,password,sk)
+'''
+getAuthList(page,limit)函数包含两个参数：page和limit
+默认page=1,limit=100
+'''
 data = sy.getAuthList()
 print(data)
 
