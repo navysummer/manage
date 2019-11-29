@@ -121,7 +121,6 @@ class GoogleAuthenticator(object):
     def generate_otp(self,timestamp):
         key = self.secretKey
         hasher = hmac.new(self.__byte_secret(), self.__int_to_bytestring(timestamp), sha1)
-        # print(hasher.hexdigest())
         hmac_hash = bytearray(hasher.digest())
         offset = hmac_hash[-1] & 0xf
         code = ((hmac_hash[offset] & 0x7f) << 24 |

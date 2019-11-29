@@ -39,7 +39,6 @@ class System(object):
             'password':self.password,
             'code':code
         }
-        # s = requests.Session()
         response = requests.post(__login_url,data=__login_data,headers=__login_headers,allow_redirects=False)
         if response.status_code == 302:
             cookies = response.cookies.get_dict()
@@ -47,7 +46,6 @@ class System(object):
                 raise Exception('get cookies fail')
             if 'session' in cookies:
                 session = cookies['session']
-                # print(session)
                 return session
             else:
                 raise Exception('get session fail')
