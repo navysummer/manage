@@ -24,9 +24,17 @@ print(code)
 # 获取授权列表
 ```python
 from manage import System
-ip = 'xxx.xxx.xxx.xxx'
+sk = 'xxxxxxxxxxxxxxxxxxx'
+'''
+ip可以填不带http://前缀的ip或者域名
+'''
+ip = 'xxxxxxxxxxxxxxxxxxx'
 phone = '184xxxx0317'
-password = 'xxxxxxxxx'
+password = 'xxxxxxxxxxxxxxxxxxx'
+'''
+System类的所有参数为System(ip,phone,password,sk,port=80)
+port参数默认80,如果是80可以不太填
+'''
 sy = System(ip,phone,password,sk)
 '''
 getAuthList(page,limit)函数包含两个参数：page和limit
