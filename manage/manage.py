@@ -14,7 +14,7 @@ class System(object):
         self.phone = phone
         self.password = password
         self.__sk = sk
-        self.session = self.__login()
+        self.session = None
 
     def __login(self):
         __login_url = self.__url + '/login'
